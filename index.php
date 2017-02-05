@@ -22,3 +22,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 }
 ?>
+<form action="index.php" method="post">
+	<label>UserName :</label>
+	<input type="text" name="username"/><br />
+	<label>Password :</label>
+	<input type="password" name="password"/><br/>
+	<input type="submit" value="Login "/><br />
+</form>
+<button>
+	<a href="registration.php" style="text-decoration : none;">Sign Up</a>
+</button>
