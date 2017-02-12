@@ -6,7 +6,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 	$username=mysqli_real_escape_string($db,$_POST['username']); 
 	$password=mysqli_real_escape_string($db,$_POST['password']); 
 	$password=md5($password); // Encrypted Password
-	$sql="SELECT id FROM TestingLogin WHERE username='$username' and pass='$password'";
+	$sql="SELECT id FROM accounts WHERE username='$username' and pass='$password'";
     $result = mysqli_query($db,$sql);
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
     $active = $row['active'];
